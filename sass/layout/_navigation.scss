@@ -1,0 +1,140 @@
+.page-header__container
+{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+.navigation
+{
+    display: flex;
+    align-items: center;
+
+}
+.logo
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    display: block;
+    color:var(--dark-color);
+        
+} 
+.logo__color
+{
+    color:var(--blue-color);
+}
+.navigation__list
+{
+    display: flex;
+    margin-left: 93px;
+    
+}
+.navigation__item
+{
+    &:not(:last-child)
+    {
+        margin-right: 50px;
+    }
+}
+.navigation__link
+{
+position: relative;
+font-weight: 500;
+font-size: 14px;
+line-height:calc(16 / 14);
+color: #212121;
+
+padding: 32px 0;
+
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,&:focus
+    {
+        color:var(--blue-color);    
+    }
+    &.navigation__link_underline::after
+    {
+        position: absolute;
+        bottom:0;
+    
+        content: " ";
+        background: var(--blue-color);
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+        height: 4px;
+    }
+}
+
+.page-contact
+{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.page-contact__container
+{
+    display: flex;
+    &:not(:last-child)
+        {
+            margin-right: 30px;
+        }    
+}
+.page-contact__link
+{
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    font-weight: 500;
+    font-size:14px;;
+    line-height: calc(16 / 14);
+    color: var(--silver-dark-color);
+
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .page-contact__container:hover &
+        {
+            color:var(--blue-color);    
+        }
+
+    &:focus
+        {
+            color:var(--blue-color);
+
+        }
+.page-contact__icon
+{
+    margin-right: 10px;
+    fill: var(--silver-dark-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .page-contact__container:hover &
+        {
+        fill:var(--blue-color);
+        }
+    .page-contact__link:focus &
+        {
+        fill:var(--blue-color);
+        }
+
+}
+.page-contact__icon_mailsize
+{
+    width: 16px;
+    height: 12px;
+}
+.page-contact__icon_phonesize
+{
+    width: 10px;
+    height: 16px;  
+}
+
+.page-header__portfolio
+{
+    border-bottom: 1px solid #ECECEC;
+}
+}

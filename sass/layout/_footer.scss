@@ -1,0 +1,146 @@
+
+.footer 
+{
+    max-width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
+    
+}
+.footer__container
+{
+    display: flex;
+    align-items: baseline;
+
+}
+.footer__address
+{
+    margin-right: 70px;
+}
+.logo_color--white
+{
+    color: var(--white-color);
+}
+
+.address
+{
+    margin-top: 30px;
+}
+.address__street
+{
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: calc(24 / 14);
+letter-spacing: 0.03em;
+color: var(--white-color);
+
+
+
+}
+.address__email ,.address__phone
+{
+font-style:normal;
+font-family: 'Roboto', sans-serif;
+font-weight:400;
+font-size: 14px;
+line-height: calc(24 / 14);
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
+
+margin-top: 9px;
+}
+
+.footer-social__title
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+.footer__icon-list
+{
+    margin-top: 20px;
+}
+.icon-list__link--background
+{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.icon-list__icon--fill
+{
+    fill: var(--white-color);
+}
+
+
+
+.footer-form__container
+{
+    position: relative;
+    margin-left: 93px;   
+   
+}
+.footer-form__title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:var(--white-color);
+}
+.footer-form__wrapper{
+    margin-top: 20px;
+}
+.footer-button__container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    display: block;
+}
+.footer-form__input-button{
+    padding-left: 16px;
+    width: 358px;
+    height: 50px;
+
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color:#2F303A;
+    color: #FFFFFF;
+}
+
+.footer-form__button-button{
+
+    position: relative;
+    margin-left: 12px;  
+    width: 200px;
+    height: 50px;
+    padding-right: 29px;
+
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height:calc(30 / 16);
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+}
+
+.footer-form__icon{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+}
