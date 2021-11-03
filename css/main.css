@@ -47,6 +47,7 @@ img {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -191,24 +192,24 @@ img {
 }
 
 .number1 {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-mobile.jpg");
-  width: 480px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile.jpg");
+  max-width: 1600px;
   height: 400px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .number1 {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-mobile2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .number1 {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tablet.jpg");
     width: 768px;
     height: 400px;
   }
@@ -216,13 +217,13 @@ img {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .number1 {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-tablet2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tablet2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .number1 {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-desctop.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desctop.jpg");
     width: 1600px;
     height: 600px;
   }
@@ -230,7 +231,7 @@ img {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .number1 {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero/hero-desctop2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desctop2x.jpg");
   }
 }
 
@@ -431,6 +432,13 @@ img {
   background-color: #F5F4FA;
 }
 
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
@@ -464,8 +472,10 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.card-team:not(:last-child) {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .card-team:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -772,12 +782,19 @@ img {
 }
 
 .footer-form__input-button {
-  width: 450px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
   height: 50px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: #2F303A;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__input-button {
+    width: 358px;
+  }
 }
 
 .footer-form__button-button {
@@ -832,11 +849,41 @@ img {
 
 .portfolio-menu-list {
   display: flex;
-  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-menu-list {
+    width: 450px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-menu-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-menu-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-menu-item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-menu-item:nth-child(4) {
+    margin-top: 15px;
+  }
+  .portfolio-menu-item:nth-child(5) {
+    margin-top: 15px;
+  }
 }
 
 .portfolio-menu-button {
@@ -894,17 +941,25 @@ img {
   transition: transform 250ms linear;
 }
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: -30px;
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .portfolio-item {
-  flex-basis: calc((100% / 3) - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  max-width: 450px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio-item:hover .portfolio-img-text {
@@ -915,12 +970,25 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100% - 4 *15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-item {
+    width: calc((100% - 6 *15px) / 3);
+  }
+}
+
 .portfolio-title-container {
-  width: 370px;
+  width: 100%;
   height: 110px;
   padding-top: 20px;
-  padding-left: 24px;
   padding-bottom: 20px;
+  padding-left: 24px;
   border: 1px solid #EEEEEE;
   border-top: transparent;
 }
@@ -962,11 +1030,18 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .btn-close {
@@ -993,8 +1068,14 @@ img {
 }
 
 .modal-group {
-  width: 448px;
+  width: 370px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-group {
+    width: 448px;
+  }
 }
 
 .modal-form {
@@ -1102,10 +1183,17 @@ img {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .input-checkbox:checked + .checkbox-text span {

@@ -11,7 +11,20 @@
 .portfolio-menu-list
 {
     display: flex;
-    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    @media screen and (max-width:767px){
+        width: 450px;
+        margin-bottom: 40px;
+    }
+    
+    @media screen and (min-width:768px){
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
 }
 .portfolio-menu-item
 {
@@ -19,6 +32,15 @@
     {
     margin-right: 8px;
     }
+}
+@media screen and (max-width:767px) {
+    .portfolio-menu-item:nth-child(4){
+        margin-top: 15px;
+    }
+    .portfolio-menu-item:nth-child(5){
+        margin-top: 15px;
+    }
+    
 }
 .portfolio-menu-button
 {
@@ -92,17 +114,28 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
 }
 .portfolio-list
 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-left: -30px;
+    
+    @media screen and (min-width:768px) 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;    
+    }   
     
 }
+
 .portfolio-item
 {
-    flex-basis: calc((100% / 3) - 30px);
-    margin-left: 30px;
-    margin-bottom: 30px;
+    max-width: 450px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width:767px) {
+        &:not(:last-child)
+        {
+            margin-bottom: 30px;
+        }
+    }
     
     &:hover .portfolio-img-text
     {
@@ -113,17 +146,29 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
     {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
     }
+    
+    @media screen and (min-width:768px) 
+    {
+        width: calc((100% - 4 *15px) / 2);
+        margin: 15px;
+    }
+    @media screen and (min-width:1200px) 
+    {
+        width: calc((100% - 6 *15px) / 3);
+    
+    }
+
 
 }
 
 .portfolio-title-container
 {
     
-    width: 370px;
+    width: 100%;
     height: 110px;
     padding-top: 20px;
-    padding-left: 24px;
     padding-bottom: 20px;
+    padding-left: 24px;
     border: 1px solid #EEEEEE;
     border-top: transparent;
     
