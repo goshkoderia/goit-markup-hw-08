@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/modern-normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="page-header">
+    <!-- <header class="page-header">
         
             <div class="container page-header__container">
                 <nav class="navigation">
@@ -42,17 +42,18 @@
                 </div>    
             </div>
     </header>
-    <main>
+     -->
+<main>
 
         <!--         SECTION1                                   -->
         
         
-        <section class="number1">
+        <!-- <section class="number1">
             <div class="number1__container container">
                 <h1 class="number1__title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="number1__button" data-modal-open >Заказать услугу</button>
             </div>
-        </section>
+        </section> -->
 
 
         <!--                SECTION FEATURES                     -->
@@ -81,7 +82,7 @@
         </section>
 
 
-        <!--                              SECTION ABOUT        -->
+                                     <!-- SECTION ABOUT        -->
 
 
 
@@ -113,7 +114,10 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="card-team">
-                        <img src="./images/img4.jpg" alt="Демьяненко" width="270" height="260">
+                        <picture>
+                            <source srcset="./images/mobile-product-designer.jpg" media="(min-width:768px)"/>
+                            <img src="./images/mobile-product-designer.jpg" alt="Демьяненко">
+                        </picture>
                         <div class="card-team__title-container">
                             <p class="card-team__name" >Игорь Демьяненко</p>
                             <p class="card-team__position" >Product Designer</p>
@@ -151,7 +155,7 @@
                         </div>                   
                     </li>
                     <li class="card-team">
-                        <img src="./images/img5.jpg" alt="Демьяненко" width="270" height="260">
+                        <img src="./images/mobile-frontend-developer.jpg" alt="Репина" >
                         <div class="card-team__title-container">
                             <p class="card-team__name" >Ольга Репина</p>
                             <p class="card-team__position" >Frontend Developer</p>
@@ -189,7 +193,7 @@
                         </div>                   
                     </li>
                     <li class="card-team">
-                        <img src="./images/img6.jpg" alt="Демьяненко" width="270" height="260">
+                        <img src="./images/mobile-marketing.jpg" alt="Тарасов" >
                         <div class="card-team__title-container">
                             <p class="card-team__name" >Николай Тарасов</p>
                             <p class="card-team__position" >Marketing</p>
@@ -227,7 +231,7 @@
                         </div>                   
                     </li>
                     <li class="card-team">
-                        <img src="./images/img7.jpg" alt="Демьяненко" width="270" height="260">
+                        <img src="./images/mobile-ui-designer.jpg" alt="Ермаков" >
                         <div class="card-team__title-container">
                             <p class="card-team__name" >Михаил Ермаков</p>
                             <p class="card-team__position" >UI Designer</p>
@@ -330,52 +334,54 @@
     
     <footer class="footer">
         <div class="container footer__container">
-                <div class="footer__address">
-                    <a class="logo logo_color--white" href="#"><span class="logo__color">Web</span>Studio</a>
-                <address class="address">
-                    <p class="address__street">г. Киев, пр-т Леси Украинки, 26</p>
-                    <a class="address__email" href="mailto:ifo@devstudio.com">info@devstudio.com</a>
-                    <a  class="address__phone" href="tel:+380961111111">+38 096 111 11 11</a>
-                </address>
-                </div>
-                <div class="footer-social">
-                    <p class="footer-social__title">присоединяйтесь</p>
-                <ul class="icon-list footer__icon-list">
-                    <li class="icon-list__item">
-                        <a class="icon-list__link icon-list__link--background" href="#">
-                            <svg class="icon-list__icon icon-list__icon--fill">
-                                <use href="./images/sprite.svg#icon-instagram"></use>                                
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="icon-list__item ">
-                        <a class="icon-list__link icon-list__link--background" href="#">
-                            <svg class="icon-list__icon icon-list__icon--fill">
-                                <use href="./images/sprite.svg#icon-twitter"></use>                                
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="icon-list__item">
-                        <a class="icon-list__link icon-list__link--background" href="#">
-                            <svg class="icon-list__icon icon-list__icon--fill">
-                                <use href="./images/sprite.svg#icon-facebook"></use>                                
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="icon-list__item">
-                        <a class="icon-list__link icon-list__link--background" href="#">
-                            <svg class="icon-list__icon icon-list__icon--fill">
-                                <use href="./images/sprite.svg#icon-linkedin"></use>                                
-                            </svg>
-                        </a>
-                    </li>
-                    
-                </ul>
+                <div class="footer-address-social__container">
+                    <div class="footer__address">
+                        <a class="logo logo_color--white" href="#"><span class="logo__color">Web</span>Studio</a>
+                    <address class="address">
+                        <p class="address__street">г. Киев, пр-т Леси Украинки, 26</p>
+                        <a class="address__email" href="mailto:ifo@devstudio.com">info@devstudio.com</a>
+                        <a  class="address__phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </address>
+                    </div>
+                    <div class="footer-social">
+                        <p class="footer-social__title">присоединяйтесь</p>
+                    <ul class="icon-list footer__icon-list">
+                        <li class="icon-list__item">
+                            <a class="icon-list__link icon-list__link--background" href="#">
+                                <svg class="icon-list__icon icon-list__icon--fill">
+                                    <use href="./images/sprite.svg#icon-instagram"></use>                                
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="icon-list__item ">
+                            <a class="icon-list__link icon-list__link--background" href="#">
+                                <svg class="icon-list__icon icon-list__icon--fill">
+                                    <use href="./images/sprite.svg#icon-twitter"></use>                                
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="icon-list__item">
+                            <a class="icon-list__link icon-list__link--background" href="#">
+                                <svg class="icon-list__icon icon-list__icon--fill">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>                                
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="icon-list__item">
+                            <a class="icon-list__link icon-list__link--background" href="#">
+                                <svg class="icon-list__icon icon-list__icon--fill">
+                                    <use href="./images/sprite.svg#icon-linkedin"></use>                                
+                                </svg>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    </div>
                 </div>
                 <div class="footer-form__container">
                     <p class="footer-form__title">Подпишитесь на рассылку</p>
                     <div role="group" class="footer-form__wrapper">
-                        <form >
+                        <form class="footer-form" >
                             <input type="email" name="email" placeholder="E-mail" class="footer-form__input-button">
                             <button class="footer-form__button-button">Подписаться
                                 <svg class="footer-form__icon">

@@ -9,22 +9,48 @@
 }
 .footer__container
 {
-    display: flex;
-    align-items: baseline;
+   
+    
+    @media screen and (min-width:1200px){
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
 
 }
-.footer__address
+.footer-form
 {
-    margin-right: 70px;
+    @media screen and (min-width:1200px) {
+
+        display: flex;
+    }
 }
+.footer-address-social__container
+{
+    @media screen and (min-width:768px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+}
+
 .logo_color--white
 {
+    text-align: center;
     color: var(--white-color);
+    @media screen and (min-width:1200px) {
+        text-align: left;        
+    }
 }
 
 .address
 {
-    margin-top: 30px;
+    margin-top: 20px;
+    text-align: center;
+    @media screen and (min-width:1200px) {
+        text-align: left;        
+    }
 }
 .address__street
 {
@@ -40,17 +66,30 @@ color: var(--white-color);
 }
 .address__email ,.address__phone
 {
-font-style:normal;
-font-family: 'Roboto', sans-serif;
-font-weight:400;
-font-size: 14px;
-line-height: calc(24 / 14);
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+    font-style:normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
 
-margin-top: 9px;
+
 }
 
+.footer-social{
+    margin-top: 60px;
+    text-align: center;
+    @media screen and (min-width:768px){margin-top: 0;
+    }
+    
+    @media screen and (min-width:1200px){
+        margin-left: 70px;
+    }
+    
+
+}
 .footer-social__title
 {
     font-family: Roboto;
@@ -62,10 +101,15 @@ margin-top: 9px;
     text-transform: uppercase;
 
     color: #FFFFFF;
+
+    @media screen and (min-width:1200px) {
+        text-align: left;        
+    }
 }
 .footer__icon-list
 {
     margin-top: 20px;
+    justify-content: center;
 }
 .icon-list__link--background
 {
@@ -80,11 +124,20 @@ margin-top: 9px;
 
 .footer-form__container
 {
-    position: relative;
-    margin-left: 93px;   
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    @media screen and (min-width:1200px){
+        margin:0;
+        margin-left: 93px;
+        max-width: 570px;
+    }
+     
    
 }
 .footer-form__title{
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -93,6 +146,9 @@ margin-top: 9px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color:var(--white-color);
+    @media screen and (min-width:1200px){
+        text-align: left;
+    }
 }
 .footer-form__wrapper{
     margin-top: 20px;
@@ -104,10 +160,8 @@ margin-top: 9px;
     display: block;
 }
 .footer-form__input-button{
-    padding-left: 16px;
-    width: 358px;
+    width: 450px;
     height: 50px;
-
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color:#2F303A;
@@ -116,8 +170,12 @@ margin-top: 9px;
 
 .footer-form__button-button{
 
+    @media screen and (max-width:1199px){
+        margin-top: 20px;  
+        left:50%;
+        transform: translateX(-50%);
+    }
     position: relative;
-    margin-left: 12px;  
     width: 200px;
     height: 50px;
     padding-right: 29px;
@@ -135,6 +193,9 @@ margin-top: 9px;
     letter-spacing: 0.06em;
 
     color: #FFFFFF;
+    @media screen and (min-width:1200px){
+        margin-left: 12px;
+    }
 }
 
 .footer-form__icon{
