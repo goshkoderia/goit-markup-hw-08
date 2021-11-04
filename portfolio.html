@@ -11,13 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <header class="page-header page-header__portfolio">
+    <header class="page-header portfolio-page-header">
         
         <div class="container page-header__container">
             <nav class="navigation">
                     <a class="logo" href="#"><span class="logo__color">Web</span>Studio</a>
                     <ul class="navigation__list">
-                        <li  class="navigation__item"><a class="navigation__link " href="index.html">Студия</a></li>
+                        <li  class="navigation__item"><a class="navigation__link" href="index.html">Студия</a></li>
                         <li  class="navigation__item"><a class="navigation__link navigation__link_underline" href="portfolio.html">Портфолио</a></li>
                         <li  class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
                     </ul>
@@ -38,10 +38,50 @@
                                 </svg>+38 096 111 11 11
                             </a>
                     </div>
-    
-            </div>    
+            </div>
+            <button type="button" class="mob-menu-open-btn">
+                <svg class="mob-menu-open-btn__icon">
+                   <use href="./images/sprite.svg#icon-menu_gamburger">
+
+                   </use> 
+                </svg>
+
+            </button>    
         </div>
-</header> -->
+        <div class="backdrop is-hidden">
+            <div class="mob-menu">
+                <div class="mob-menu__content">
+                    <ul class="mob-menu-navigation__list">
+                        <li class="mob-menu-navigation__item">
+                            <a class="mob-menu-navigation__link" href="#">Студия</a>
+                        </li>
+                        <li class="mob-menu-navigation__item">
+                            <a class="mob-menu-navigation__link" href="#">Портфолио</a>
+                        </li>
+                        <li class="mob-menu-navigation__item">
+                            <a class="mob-menu-navigation__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-menu-contact__list">
+                        <li class="mob-menu-contact__item"><a class="mob-menu-contact__link phone-link" href="">+38 096 111 11 11</a></li>
+                        <li class="mob-menu-contact__item"><a class="mob-menu-contact__link mail-link" href="">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mob-menu-social__list">
+                       <li class="mob-menu-social__item"><a class="mob-menu-social__link" href="">Instagram</a></li>
+                       <li class="mob-menu-social__item"><a class="mob-menu-social__link" href="">Twitter</a></li>
+                       <li class="mob-menu-social__item"><a class="mob-menu-social__link" href="">Facebook</a></li>
+                       <li class="mob-menu-social__item"><a class="mob-menu-social__link" href="">LinkedIn</a></li>     
+                    </ul>
+                </div>
+                <button type="button" class="mob-menu-close-btn">
+                    <svg class="mob-menu-close-btn__icon">
+                        <use href="./images/sprite.svg#icon-x"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+</header>
     <main>
 
         <!-- ---------------------------------------------------------PORTFOLIO--------------------------------------------------------- -->
@@ -316,6 +356,6 @@
                 </div>
         </div>
     </footer>
-    
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
