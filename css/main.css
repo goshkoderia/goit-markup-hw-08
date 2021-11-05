@@ -6,6 +6,10 @@
   --regular_customers-color:#AFB1B8;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   display: block;
@@ -17,6 +21,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, a {
@@ -645,9 +651,21 @@ img {
 
 @media screen and (min-width: 768px) {
   .card-team {
-    width: calc((100% - 4 * 15) / 2);
+    width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-team {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+}
+
+.team__photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .card-team__title-container {
