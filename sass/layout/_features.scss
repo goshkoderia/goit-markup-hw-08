@@ -1,6 +1,8 @@
 .features
 {
+    padding-top: 60px;
     padding-bottom: 60px;
+
     @media screen and (min-width:1200px) {
         padding-top: 94px;
         padding-bottom: 94px;
@@ -8,6 +10,7 @@
 }
 .features__title
 {
+    margin-top: 30px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -31,6 +34,9 @@
     letter-spacing: 0.03em;
 
     color: #757575;
+    @media screen and (max-width:767px) { 
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and(min-width:768px) 
@@ -74,7 +80,6 @@
 {
 
     &::before{
-        margin-top: 30px;
         margin-bottom: 30px;
         content: "";
         width: 100%;
